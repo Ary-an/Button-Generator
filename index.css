@@ -1,0 +1,182 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,blue,dodgerblue,lightblue); 
+}
+
+
+.container{
+    background-color: white;
+    padding: 24px;
+    width: 70%;
+    border-radius: 8px;
+    margin: 150px auto 0 auto;
+    font-size: 20px;
+}
+
+#code-wrapper {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    top: 0;
+}
+
+
+#code-result {
+    width: 100%;
+    height: 400px;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 8px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#code-result h3 {
+    font-size: 32px;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+}
+
+#code-result span {
+    padding: 8px;
+    font-size: 28px;
+    font-weight: 300;
+
+}
+
+#close{
+ position: absolute;
+ top: 0;
+ right: 5px;
+ outline: none;
+ border: none;
+ font-size: 24px;   
+ background-color: transparent;
+ cursor: pointer;
+}
+
+
+.top-section{
+    margin: 18px auto;
+    text-align: center;
+}
+
+.default-btn{
+    margin-bottom: 8px; 
+}
+
+hr{
+    border: 1px solid #ccc;
+}
+
+input{
+    outline: none;
+    width: 50px;
+    margin-right: 64px; 
+}
+
+.middle-section{
+    margin: 24px 0;
+    padding: 24px;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px auto;
+}
+
+label{
+    margin: 0 8px;
+}
+
+.padding-section{
+    margin-right: 100px;
+}
+.padding-section input{
+    margin:0 4px;
+}  
+
+.bottom-section{
+    margin: 18px auto;
+    text-align: center;
+}
+
+input[name='btn-name']{
+    width:200px;
+}
+
+#code-btn{
+    width: 150px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-sizing: content-box;
+    box-shadow: 0 4px 5px #ccc;
+    outline: none;
+    font-weight:400;
+    font-size: 18px;
+    transition: ease 0.5s;
+}
+
+#code-btn:hover{
+    background-color: white;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 3px 2px #ddd;
+}
+
+@media (max-width: 768px) {
+    .container{
+      height: auto;
+      margin-bottom: 60px;
+    }
+    
+    .inputs{
+         display: block;
+     }
+    
+     .bottom-section {
+        display: block;
+      }
+    
+    input{
+      width: 100%;
+      margin: 10px;
+    }
+
+    input[name='btn-name']{
+        width: 100%;
+    }
+    .padding-section{
+        width: 100%;
+        margin: 10px;
+    }
+    #code-result{
+        width: 80%;
+    }    
+    #result{
+        font-size: 16px;
+    }
+  }

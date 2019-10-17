@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+            
+        <div id="code-wrapper">
+           <div id="code-result">
+            <button id="close">x</button>
+              <h3>Generated CSS Code</h3>
+                 <span id="result"></span>
+            </div>
+        </div>
+            
+        <section class="container">
+            <form>
+            <div class="top-section">
+                <button id="default-btn" onclick="event.preventDefault();"> Default Label</button>
+                <hr>
+            </div>
+            <div class="middle-section">
+                <div class="inputs">
+                        <label>Button Label : </label> <input type="text" name="btn-name" id="btn-name" onkeyup="changeName()" >
+                        <label>Font Size : </label> <input type="number" min="0" value="16" name="font-size" id="btn-font" onchange="changeSize()" onkeyup="changeSize()" required>
+                        <label>Font Color : </label> <input type="color" name="font-color" id="btn-color" onchange="changeFontColor()">     
+                </div>
+
+                <div class="inputs">
+                    <div class="padding-section">
+                        <label>Padding Top-Right-Bottom-Left : </label> 
+                        <input type="number" name="pd-top" value="1" min="0" id="pd-top"  onchange="changePadding()" onkeyup="changePadding()" required>-
+                        <input type="number" name="pd-right" value="6" min="0" id="pd-right" onchange="changePadding()" onkeyup="changePadding()" required>-
+                        <input type="number" name="pd-bottom" value="1" min="0" id="pd-bottom" onchange="changePadding()" onkeyup="changePadding()" required>-
+                        <input type="number" name="pd-left"  value="6" min="0"  id="pd-left"  onchange="changePadding()" onkeyup="changePadding()" required>
+                    </div>
+                    
+                    <label>Background Color : </label> <input type="color" name="bg-color" value="#cccccc" id="back-color" onchange="changeBackColor()">
+                </div>
+
+               <div class=" inputs">
+                    <label>Border Color : </label> <input type="color" name="brd-color" value="#cccccc"  id="brd-color" onchange="changeBorderColor()" required>
+                    <label>Border Width : </label> <input type="number" name="brd-width" min="0" id="brd-width" onchange="changeBorderWidth()" onkeyup="changeBorderWidth()" value="2"  required>
+                    <label>Border Radius : </label> <input type="number" name="brd-radius" min="0" id="brd-radius"  onchange="changeBorderRadius()" onkeyup="changeBorderRadius()" value="0"  required>
+               </div>
+                
+            </div>
+            <div class="bottom-section">
+                <button  id="code-btn">Generate Code</button>
+            </div>
+        </form>
+
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
